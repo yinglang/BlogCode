@@ -20,7 +20,7 @@ int main()
 {
 	// 如果运行报错找不到encodings,需设置使用的python.exe的路径
 	// Py_SetPythonHome(L"/home/hui/ide/miniconda3//envs/torch101/bin/"); 
-   // Py_SetProgramName(program);  /* optional but recommended */
+   // Py_SetProgramName(L"cpp_invoke_python");  /* optional but recommended */
 	
 	Py_Initialize();//使用python之前，要调用Py_Initialize();这个函数进行初始化
 	myassert(Py_IsInitialized(), "Initialized failed!");
