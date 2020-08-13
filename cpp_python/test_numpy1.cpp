@@ -34,6 +34,10 @@ int main()
    ok = PyArg_Parse(pRet1, "i", &res1);///转换返回类型
 	myassert(ok, "parse return result error");
    cout << "res: " << res1 << endl;
+//    cout << pFunc1->ob_refcnt << endl; // 打印变量的引用计数
+//    cout << args1->ob_refcnt << endl; // 打印变量的引用计数
+//    cout << pRet1->ob_refcnt << endl; // 打印变量的引用计数
+//    cout << pModule->ob_refcnt << endl; // 打印变量的引用计数
    Py_DECREF(pFunc1);
    Py_DECREF(args1);
    Py_DECREF(pRet1);
