@@ -11,8 +11,8 @@ static PyObject *SpamError;
 // 使用PyLong_FromLong/Py_BuildValue转化为python对象传入python
 static PyObject* cos_func_np(PyObject *self, PyObject *args)
 {
-	// 注意在cpp里面调用的printf在调用时是打印不出来的
-	printf("hello world");
+	// 注意在cpp里面调用的printf在python调用时是打印不出来的,在ipython调用时候会在ipython退出时打印
+	printf("hello world\n");
 	PyArrayObject *in_array;
 	if (!PyArg_ParseTuple(args, "O!", &PyArray_Type, &in_array)) {
 		PyErr_SetString(SpamError, "parse args fialed");
